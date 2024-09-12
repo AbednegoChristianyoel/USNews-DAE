@@ -11,10 +11,6 @@ android {
     namespace 'com.example.usnews'
     compileSdk 34
 
-    lintOptions {
-        baseline file("lint-baseline.xml")
-    }
-
     defaultConfig {
         applicationId "com.example.usnews"
         minSdk 21
@@ -57,4 +53,5 @@ dependencies {
     implementation project(":core")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.room:room-ktx:2.6.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
 }
